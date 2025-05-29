@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 4</title>
+</head>
+<body>
+    <h1 id="my_name"></h1>
+    <script>
+        const myName='Souhardya Mridha';
+        console.log(myName);
+        document.querySelector('#my_name').innerText=myName;
+        let bagPrice=(15599-(10/100*15599))-272;
+        let jeansPrice=(2499-(41/100*2499))-29;
+        const gstPercentage=118/100;
+        let bagValue=Math.round((bagPrice+jeansPrice+25+20)*gstPercentage);
+        console.log(`Myntra Cart value is ₹${bagValue}`);
+        console.log(eval('45+90*3/4'))
+    </script>
+</body>
+</html>
