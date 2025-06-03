@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcitons</title>
+</head>
+<body>
+    <script>
+        let age=21;
+        function printAge() {
+            console.log(`Your age is ${age}`);
+        }  
+        printAge(); 
+        age=45;
+        printAge();
+        age=1;     
+        printAge();
+
+        function generateRandomMove() {
+            let random=Math.random();
+            let randomMove=random*3;
+            return randomMove;
+        } 
+
+        console.log(generateRandomMove());
+        console.log(generateRandomMove());
+        console.log(generateRandomMove());
+        console.log(generateRandomMove());
+        console.log(generateRandomMove());
+
+        function determineDriveStatus() {
+            let age=21;
+            if (age===undefined) {
+                return `You're not Human`
+            }
+            let status;
+            if (age>18) {
+                return 'You can Drive';
+            } else {
+                return 'Use a Bicycle';
+            }
+        }
+        console.log(determineDriveStatus());
+
+        function sum(a,b) {
+            let sum=a+b;
+            return sum;
+        }
+        console.log('Sum is:',sum(4,5));
+        console.log('Sum is:',sum(42.8788,335.7654));
+        console.log('Sum is:',sum(3349408,5663));
+        console.log('Sum is:',sum(9990,5222));
+
+        function greeting(name='Pyaare') {
+            console.log(`Namaste ${name} uncle`);
+        }
+        name=greeting();
+    </script>
+</body>
+</html>
