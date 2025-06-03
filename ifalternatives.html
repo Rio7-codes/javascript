@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Alternatives</title>
+</head>
+<body>
+    <script>
+        //One Line
+        let age=31;
+        let result=age>18?'Adult':'Kid';
+        console.log(result);
+
+        //Guard Operator
+        let a=0;
+        let finalAge=a||18; //Either 'a' or 18
+        console.log(a);
+        console.log(finalAge);
+
+        //Default Operator
+        let finalage=0;
+        let FinalAge=finalage??25; //Either 'finalage' or 25
+        console.log(finalage);
+        console.log(FinalAge);
+    </script>
+</body>
+</html>
