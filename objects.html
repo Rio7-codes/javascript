@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        let product = {
+            company: 'Mango',
+            price: 861,
+            'item-name': 'T-Shirt',
+        };
+        console.log(product);
+        console.log(product.company);
+        console.log(product.price);
+        propertyName='item-name';
+        console.log(product[propertyName]);
+        console.log(product.propertyName);
+        product.price = 999;
+        console.log(product.price);
+
+        delete product.company;
+        console.log(product);
+
+        product={
+            company:'Mango',
+            price: 861,
+            'item-name':'T-Shirt',
+            displayPrice: function(){
+                console.log(`Price of the product is ₹${this.price}`)  //'this' refers to the current object
+            }
+        }
+        product.displayPrice();
+
+        //Autoboxing
+        console.log('Rio is a boy'.length);
+        console.log('Rio is a boy'.toUpperCase());
+        console.log('Rio is a boy'.replace('io','ay'));
+
+        let a=5;
+        let b=a;
+        console.log(`a=${a}, b=${b}`);
+        a=8;
+        console.log(`a=${a}, b=${b}`);
+
+        let x={num: 5};
+        let y=x;
+        console.log(`x=${x.num}, y=${y.num}`);
+        x.num=8;
+        console.log(`x=${x.num}, y=${y.num}`);
+
+        let p={pop:'iujh'};
+        let q={pop:'iujh'};
+        console.log(p===q);
+        console.log(p.pop===q.pop);
+
+        product = {
+            company: 'Mango',
+            price: 861,
+            'item-name': 'T-Shirt',
+        };
+        let {company,price}=product;
+        console.log(company);
+        console.log(price);
+    </script>
+</body>
+</html>
