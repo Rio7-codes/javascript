@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 7</title>
+</head>
+<body>
+    <script>
+        let productMyntra={
+            brand:'Nike',
+            price:3299,
+            item:'Nike Air Max',
+            color:'White',
+            'delivery-time':'2 days',
+        };
+        console.log(productMyntra);
+        let copyProduct=productMyntra;
+        copyProduct.price=2999;
+        console.log(productMyntra);
+        copyProduct.brand='Puma';
+        console.log(productMyntra);
+        console.log(productMyntra['delivery-time']);
+
+        let obj={
+            message:'Good Job',
+            status:'Complete',
+        };
+        console.log(obj);
+        let{message,status}=obj;
+        console.log(message);
+        console.log(status);
+
+        function isIdenticalProduct(product1,product2) {
+            if (typeof product1 !== 'object' || typeof product2 !== 'object') {
+                console.warn('Parameter passed was not an object');
+                return false;
+            }
+            if (product1==product2) {
+                return true;
+            }
+            if (product1.brand==product2.brand && product1.price==product2.price && product1.color==product2.color) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        let product2={
+            brand:'Puma',
+            price:2799,
+            item:'Puma Dryflex',
+            color:'Red',
+            'delivery-time':'2 days',
+        };
+        let product3={
+            brand:'Adidas',
+            price:4000,
+            item:'Adidas AdiZero Evo',
+            color:'White',
+            'delivery-time':'5 days',
+        };
+        let product4={
+            brand:'Puma',
+            price:2799,
+            item:'Puma MMS Aerocat',
+            color:'Red',
+            'delivery-time':'3 days',
+        };
+        console.log(isIdenticalProduct(productMyntra,product2));
+        console.log(isIdenticalProduct(product3,product2));
+        console.log(isIdenticalProduct(product2,product4));
+        console.log(isIdenticalProduct(product2,product3));
+    </script>
+</body>
+</html>
