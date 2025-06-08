@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop</title>
+</head>
+<body>
+    <script>
+        let n=1;
+        while(n<=10) {
+            console.log(n);
+            n++;
+        }
+        console.log(`Final Value: ${n}`);
+
+        let num=0;
+        while (num<1) {
+            console.log(num);
+            num=Math.random()*2;
+        }
+        console.log(`Final Value: ${num}`);
+
+        let x=1;
+        do {
+            console.log(x);
+            x++;
+        } while(x>5); //False condition but do-while still runs atleast once
+    </script>
+</body>
+</html>
