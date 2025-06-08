@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 9</title>
+</head>
+<body>
+    <script>
+        let arr=[5,6];
+        console.log('Array: '+arr);
+        arr.unshift(4);
+        arr.push(7);
+        console.log('Updated Array: '+arr);
+
+        function getArray(arr,position) {
+            return arr[position]-1;
+        }
+        array=[129,2223,443,455,6566,776,372,82,2922];
+        console.log('Array: '+array);
+        position=4
+        element=getArray(array,position);
+        console.log(`Element in array at Position ${position}: `+element);
+
+        function arrCopy(arr) {
+            return arr.slice(0,arr.length)
+        }
+        let arr2=[4,5,6,7];
+        console.log('Array: '+arr2);
+        let copy=arrCopy(arr2);
+        console.log('Copy: ' +copy);
+        copy[0]=null;
+        console.log(arr2);
+        console.log(copy);
+
+        const prime=[];
+        function isPrime(num) {
+            for (let x=2; x<=Math.sqrt(num); x++) {
+                if (num%x===0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        let n=1;
+        while (n<=5) {
+            for (let i=2; i<=100; i++) {
+                if (isPrime(i)==true) {
+                    prime.push(i);
+                    n++;
+                }
+                if (prime.length==5) {
+                    break;
+                }
+            }
+        }
+        console.log(prime);
+
+        for (let j=10; j>=1; j--) {
+            console.log(j);
+        }
+
+        let arr3=[1,-6,5,7,-98];
+        arr4=[];
+        for (let k=0;k<arr3.length;k++) {
+            if (arr3[k]>0) {
+                arr4.push(arr3[k]);
+            }
+        }
+        console.log(arr4);
+
+        arr5=['I','Am','A','JavaScript','Enjoyer','!!!'];
+        arr6=[];
+        for (let z=0; z<arr5.length; z++) {
+            arr6+=arr5[z]+" ";
+        }
+        console.log(arr6);
+    </script>
+</body>
+</html>
