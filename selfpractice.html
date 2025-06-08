@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Practice</title>
+    <style>
+        #butn {
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            border-radius: 6px;
+            font-size: 20px;
+        }
+        .js-normal {
+            background-color: bisque
+        }
+        .js-three {
+            background-color: aqua;
+        }
+        .js-five {
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <button id="butn" onclick="
+        isClicked();
+        ">0</button>
+    <script>
+        let clicked = localStorage.getItem('clicked') || 0;
+        function isClicked() {
+            clicked++;
+            localStorage.setItem('clicked',clicked);
+            showOutput();
+        };
+        function showOutput() {
+            let button = document.querySelector('#butn');
+            if (clicked>0 && clicked%5==0) {
+                button.classList.remove('js-five');
+                button.classList.remove('js-normal');
+                button.classList.add('js-five');
+            } else if (clicked >0 && clicked%3==0) {
+                button.classList.remove('js-five');
+                button.classList.remove('js-normal');
+                button.classList.add('js-three');
+            } else {
+                button.classList.remove('js-three');
+                button.classList.remove('js-five');
+                button.classList.add('js-normal');
+            }
+            button.innerText=clicked;
+        }
+        showOutput();
+    </script>
+</body>
+</html>
