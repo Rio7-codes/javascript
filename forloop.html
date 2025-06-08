@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body>
+    <script>
+        for (let n=1; n<=10; n++) {
+            console.log(n);
+        }
+
+        console.log('ARRAY!!!');
+        let arr=[3,4,5,6,7,8,9];
+        for (let x=0; x<arr.length; x++) {
+            console.log(arr[x]);
+        }
+
+        let sum=0;
+        let array=[14,332,-3,42,15,56,732,844,2332];
+        for (let i=0; i<array.length; i++) {
+            sum+=array[i];
+        }
+        console.log('Sum of Array Elements: ' + sum);
+
+        let arr1=[1,3,6,7,9,4];
+        let arr2=[];
+        for (let j=0; j<arr1.length; j++) {
+            arr2.push(arr1[j]*arr1[j]);
+        }
+        console.log(`Squared: ${arr2}`);
+
+
+    for (let k=0; k<50; k++) {
+        console.log(k);
+        if (k===18) {
+            break;
+        }
+    }
+
+    let newarray=[1,21,4,54,8,654,22,11,55,77,876,22];
+    console.log(newarray);
+    let search=8;
+    let idx=0;
+    for (let a=0; a<newarray.length; a++){
+        if (newarray[a]===search) {
+            break;
+        }
+        idx++;
+    }
+    console.log(`${search} found at index ${idx}`);
+
+    let narray=[1,21,4,54,8,654,22,11,55,77,876,22];
+    console.log(narray);
+    let narray2=[];
+    for (let b=0; b<narray.length; b++) {
+        if (narray[b]%2==0) {
+            continue;
+        }
+        narray2.push(narray[b]);
+    }
+    console.log(`Odd Numbers in Array: ${narray2}`);
+    </script>
+</body>
+</html>
