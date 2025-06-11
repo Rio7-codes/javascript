@@ -7,8 +7,12 @@
 </head>
 <body>
     <script>
-        setTimeout(() => console.log('Wake Up!!!!'), 3000);
-        console.log('Alarm Set');
+        let timerId = setTimeout(() => console.log(`Wake Up!!!! ${new Date()}`), 1000);
+        console.log(`Alarm Set with Timer ID: ${timerId}`);
+        //clearTimeout(timerId);
+
+        let intervalId = setInterval(() => console.log(`Wake Up!!!! ${new Date()}`), 2000);
+        setTimeout(() => clearInterval(intervalId),8000);
     </script>
 </body>
 </html>
