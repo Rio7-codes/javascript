@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Each Loops</title>
+</head>
+<body>
+    <script>
+        let a= [3,5,7,9];
+
+         for (let i = 0; i < a.length; i++) {
+            console.log(a[i]);
+         }
+
+         console.log('----');
+
+         a.forEach((num) => console.log(num));
+
+         console.log('----');
+
+         let arr= [1,2,3,4,5,6,7,8,9];
+         function search(arr,num) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i]==num) {
+                    console.log (`Element found at index ${i}`);
+                    return;
+                }            
+            }
+            console.log('Element not found!')
+         }
+         search(arr,5);
+         search(arr,12);
+
+         console.log('----');
+
+         arr.forEach(num => {  //do not use forEach if u want to break out of any loop
+            if (num==5) {
+                return;  //using return in forEach works like a 'continue' statement. There's no other way to 'break' out!!!
+            }
+            console.log(`visited ${num}`);
+         });
+    </script>
+</body>
+</html>
