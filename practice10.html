@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 10</title>
+    <style>
+        .btn {
+            height: 30px;
+            width: 130px;
+            text-align: centre;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 2px;
+            background-color: rgb(255, 38, 38);
+            color: rgb(255, 255, 255);
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        .js-btn-double {
+            height: 60px;
+            width: 260px;
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">Make me Bigger!!!</button>
+    <script>
+        let multiply = (num1,num2) => num1*num2;
+        console.log(multiply(4,6));
+        console.log(multiply(664,633));
+        console.log('-------');
+
+        let printGreeting = () => console.log('Namaste');
+        let runTwice = inputFunction => {
+            inputFunction();
+            inputFunction();
+        }
+        runTwice(printGreeting);
+        console.log('-------');
+
+        function doubleTheSize() {
+            let button = document.querySelector('.btn');
+            button.classList.add('js-btn-double');
+        }
+
+        let buttonElement = document.querySelector('.btn');
+         buttonElement.addEventListener('click', event => 
+            setTimeout(doubleTheSize,2000))
+        
+        let arr = [175,764,77765,333,6789];
+        let sum=0;
+        arr.forEach(num => sum+=num)
+        console.log(sum);
+        console.log('-------');
+
+        let a = [1,2,3,4,5,6,7,8,9,10];
+        let squares = a.map(num => num*num)
+        console.log(squares);
+    </script>
+</body>
+</html>
